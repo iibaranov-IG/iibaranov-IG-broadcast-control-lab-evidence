@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "paella-984",
+    "title": "Deliver audio-only playback support to Opencast 21"
+  },
+  "source": {
+    "repository": "opencast/opencast",
+    "commit": "c2ddb4ea73b063534349a890551c9340a9e4303c"
+  },
+  "bcl": {
+    "revision": "192fd2050532a660993f9ae8b7da83f9affa0231"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 1,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "2c1f89a84b8a5b6049679d18b9d27f96231ba56a04b79eb2f19e72e8548eb079",
+    "tree": "f4c418d34487d2ffbc61b21b0a5048e03e5f4ef7"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL executes the exact issue payload against the locked dependency before and after the repair and builds both Paella bundles. It does not ingest media into a complete Opencast server or exercise browser audio output."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/polimediaupv/paella/issues/984",
+    "pr": "https://github.com/opencast/opencast/pull/8017"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
