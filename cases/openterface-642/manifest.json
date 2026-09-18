@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "openterface-642",
+    "title": "Persist CH9329 baudrate across a power cycle"
+  },
+  "source": {
+    "repository": "TechxArtisanStudio/Openterface_QT",
+    "commit": "7be8db841fe8ffa27e8adcbbcd654230846994c1"
+  },
+  "bcl": {
+    "revision": "cf3f900ec177dbc1fcce68461e9ef2063cf04054"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 2,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "263cb4d430d8b46af0012bcd0839292b2923eee91fe2aeedf56104aa052c3ef8",
+    "tree": "4452a9afa5ab8ab4f7597b50d77862f16e538d35"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL proves the invalid baseline packet, writable candidate packet, and strict response gates. A separate Ubuntu 24.04 qmake build compiled the complete application and five focused Qt tests passed. Only the reporter can prove nonvolatile persistence on a physical CH9329 power cycle."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/TechxArtisanStudio/Openterface_QT/issues/642",
+    "pr": "https://github.com/TechxArtisanStudio/Openterface_QT/pull/643"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
