@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "audacity-12147",
+    "title": "Restore Audacity playback seek shortcuts"
+  },
+  "source": {
+    "repository": "audacity/audacity",
+    "commit": "b51ae6bddaffd719c60686ff121e10e8f0850a0a"
+  },
+  "bcl": {
+    "revision": "dbda1291e5b8ea26f4f5848a242c46760a3e3249"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 4,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "dd11eefd59b71e0854833ad3cb879324cbbe393ab5f393025637b55690263d89",
+    "tree": "cf574f38aa8a7ec495b2b6928125487112e06c01"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL verifies baseline-red/candidate-green source contracts and focused C++ test coverage. This workstation lacks the required Qt 6.10 kit, so the complete application and C++ test target rely on upstream CI; Windows runtime behavior remains an owner check."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/audacity/audacity/issues/12147",
+    "pr": "https://github.com/audacity/audacity/pull/12148"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
