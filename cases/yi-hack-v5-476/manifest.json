@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "yi-hack-v5-476",
+    "title": "Wire the YI Dome PTZ preset buttons to their existing actions"
+  },
+  "source": {
+    "repository": "alienatedsec/yi-hack-v5",
+    "commit": "d1997ae29ddeaf7d39d4d42c6da85901b7e56bcd"
+  },
+  "bcl": {
+    "revision": "23350658647850f6e3fb77c73c391c088d23c8b2"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 1,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "c03a2c36ecd5bb8bc461559fd65928c37d13dea4798942e8136a32d2d822901c",
+    "tree": "cb63aa27fc565956c2b1da5d4759036cd0ae3cb1"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL executes the real PTZ module with a minimal DOM and jQuery boundary, proving the baseline has no handlers and the candidate sends all three expected CGI requests. It does not flash firmware or move a physical camera."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/alienatedsec/yi-hack-v5/issues/476",
+    "pr": "https://github.com/alienatedsec/yi-hack-v5/pull/478"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
