@@ -1,4 +1,77 @@
 {
   "schemaVersion": 1,
-  "cases": []
+  "cases": [
+    {
+      "id": "advanced-camera-card-2794",
+      "manifest": "cases/advanced-camera-card-2794/manifest.json"
+    },
+    {
+      "id": "amical-165",
+      "manifest": "cases/amical-165/manifest.json"
+    },
+    {
+      "id": "audacity-12147",
+      "manifest": "cases/audacity-12147/manifest.json"
+    },
+    {
+      "id": "babyface-pro-linux-5",
+      "manifest": "cases/babyface-pro-linux-5/manifest.json"
+    },
+    {
+      "id": "esp-osc-2",
+      "manifest": "cases/esp-osc-2/manifest.json"
+    },
+    {
+      "id": "linux-show-player-399",
+      "manifest": "cases/linux-show-player-399/manifest.json"
+    },
+    {
+      "id": "logic-pro-mcp-38",
+      "manifest": "cases/logic-pro-mcp-38/manifest.json"
+    },
+    {
+      "id": "low-latency-audio-36",
+      "manifest": "cases/low-latency-audio-36/manifest.json"
+    },
+    {
+      "id": "node-av-349",
+      "manifest": "cases/node-av-349/manifest.json"
+    },
+    {
+      "id": "noisy-studio-99",
+      "manifest": "cases/noisy-studio-99/manifest.json"
+    },
+    {
+      "id": "openmixercontrol-80",
+      "manifest": "cases/openmixercontrol-80/manifest.json"
+    },
+    {
+      "id": "openterface-642",
+      "manifest": "cases/openterface-642/manifest.json"
+    },
+    {
+      "id": "paella-984",
+      "manifest": "cases/paella-984/manifest.json"
+    },
+    {
+      "id": "pipewirecontroller-19",
+      "manifest": "cases/pipewirecontroller-19/manifest.json"
+    },
+    {
+      "id": "scribe-worker-49",
+      "manifest": "cases/scribe-worker-49/manifest.json"
+    },
+    {
+      "id": "tonepush-9",
+      "manifest": "cases/tonepush-9/manifest.json"
+    },
+    {
+      "id": "yi-hack-v5-476",
+      "manifest": "cases/yi-hack-v5-476/manifest.json"
+    },
+    {
+      "id": "zha-device-handlers-5329",
+      "manifest": "cases/zha-device-handlers-5329/manifest.json"
+    }
+  ]
 }
