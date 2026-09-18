@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "zha-device-handlers-5329",
+    "title": "Expose both HOBEIAN ZG-305Z USB outputs as switches"
+  },
+  "source": {
+    "repository": "zigpy/zha-device-handlers",
+    "commit": "8c8e861c9bf8e4eb389fb42ecdc00cfe3a893452"
+  },
+  "bcl": {
+    "revision": "a4d5af3d47ed412cbc4e545193c11c1da55360eb"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 1,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "214da52cfa179db869ef862c7bd4b51892770079b4e23338f4b6fbb17e22b6fe",
+    "tree": "7c5547f2f427ef8f2867bd28fc98b7887ff7e67f"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL verifies the exact declarative endpoint replacements and regression coverage. Upstream tests passed separately. A physical ZG-305Z is still required to confirm that endpoint 1 maps to one USB connector and endpoint 2 to the other."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/zigpy/zha-device-handlers/issues/5329",
+    "pr": "https://github.com/zigpy/zha-device-handlers/pull/5343"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
