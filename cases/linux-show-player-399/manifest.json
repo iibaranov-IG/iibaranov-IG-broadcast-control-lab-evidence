@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "linux-show-player-399",
+    "title": "Preserve JACK routes while configured ports are unavailable"
+  },
+  "source": {
+    "repository": "FrancescoCeruti/linux-show-player",
+    "commit": "79f7efa4684c3cad6013e1cd2a0400d7122f542c"
+  },
+  "bcl": {
+    "revision": "1e55be430d3a87c71cd7335f21de4b761288d7d0"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 3,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "b3e248e07bb1c1a9de9824a8f1ef551d101b300fdceacba9d14c03103ec791a7",
+    "tree": "d7a1405d55955443fc70f16ea350891c6a0ac351"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL exercises route reconciliation and JACK failures with deterministic doubles. A live JACK graph and hot-unplugged client remain owner-validated."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/FrancescoCeruti/linux-show-player/issues/399",
+    "pr": "https://github.com/FrancescoCeruti/linux-show-player/pull/401"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
