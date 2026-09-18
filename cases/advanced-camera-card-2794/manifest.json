@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "advanced-camera-card-2794",
+    "title": "Render non-template camera controls during startup"
+  },
+  "source": {
+    "repository": "dermotduffy/advanced-camera-card",
+    "commit": "d2ce00c4deb3e978893ef3b585492bd8bde518b6"
+  },
+  "bcl": {
+    "revision": "71c17c710262deb4d545e0cd3b33976b559634ce"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 3,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "5fe23979920933d342f66feb658f9f2a0853e11de692b2fddbb199011325e48c",
+    "tree": "c1d4f87da2bc0421a3761b6b3cf4ba0b74bec89a"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": true,
+    "limitations": [
+      "BCL proves the exact source gate and candidate predicate. Separately, the baseline regression failed and the candidate passed in Chromium, Firefox, and WebKit; all 7,425 unit tests, 100% covered logic, build, lint, formatting, typecheck, and prune checks passed. The full browser suite has one unrelated WebKit focus failure that reproduces unchanged on the baseline. Final wall-tablet timing remains the owner check."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/dermotduffy/advanced-camera-card/issues/2794",
+    "pr": "https://github.com/dermotduffy/advanced-camera-card/pull/2797"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
