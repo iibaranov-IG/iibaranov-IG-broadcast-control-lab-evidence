@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/iibaranov-IG/iibaranov-IG-broadcast-control-lab-evidence/blob/main/schema/public-evidence-v1.schema.json",
+  "title": "BCL Public Evidence v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "case",
+    "source",
+    "bcl",
+    "qualification",
+    "candidate",
+    "verification",
+    "upstream",
+    "publishedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "commit"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "bcl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "revision"
+      ],
+      "properties": {
+        "revision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "run": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^https://github\\.com/.+/actions/runs/[0-9]+$"
+        }
+      }
+    },
+    "qualification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "baseline",
+        "candidate",
+        "suite"
+      ],
+      "properties": {
+        "kind": {
+          "const": "RED_GREEN"
+        },
+        "baseline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "const": "EXPECTED_FAILURE"
+            },
+            "exitCode": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
+        },
+        "candidate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "const": "PASS"
+            },
+            "exitCode": {
+              "const": 0
+            }
+          }
+        },
+        "suite": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "total",
+            "skipped"
+          ],
+          "properties": {
+            "status": {
+              "const": "PASS"
+            },
+            "total": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "skipped": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256"
+      ],
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "tree": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hardwareVerified",
+        "applicationVerified",
+        "limitations"
+      ],
+      "properties": {
+        "hardwareVerified": {
+          "type": "boolean"
+        },
+        "applicationVerified": {
+          "type": "boolean"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "upstream": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "issue",
+        "pr"
+      ],
+      "properties": {
+        "issue": {
+          "type": "string",
+          "pattern": "^https://github\\.com/.+/issues/[0-9]+$"
+        },
+        "pr": {
+          "type": "string",
+          "pattern": "^https://github\\.com/.+/pull/[0-9]+$"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "kind"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*\\.\\.)[A-Za-z0-9._/-]+$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "kind": {
+            "enum": [
+              "log",
+              "report",
+              "summary"
+            ]
+          }
+        }
+      }
+    },
+    "publishedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
