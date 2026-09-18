@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "babyface-pro-linux-5",
+    "title": "Restart the Babyface Pro USB session after a coalesced STOP/START"
+  },
+  "source": {
+    "repository": "ismail-bahloul/babyface-pro-linux",
+    "commit": "1d4f36af468615c803e0ad8f05e0c24503cbe063"
+  },
+  "bcl": {
+    "revision": "71bc2ed14594c604b320f418e68d215bd4cf36ff"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 2,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "93eb8ed3115d09d8562caf20389b71bf6ff283e43be7b75fa0a083a39d5f300c",
+    "tree": "ea9dd967962423ae592f5eaccf83f6d3c89d5c4d"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL verifies the exact source wiring and five lifecycle transitions. The changed module also builds against Ubuntu Linux 7.0 headers; audible recovery still requires the reporter’s Babyface Pro FS."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/ismail-bahloul/babyface-pro-linux/issues/5",
+    "pr": "https://github.com/ismail-bahloul/babyface-pro-linux/pull/6"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
