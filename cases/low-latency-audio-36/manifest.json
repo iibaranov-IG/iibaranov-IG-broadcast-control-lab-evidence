@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "low-latency-audio-36",
+    "title": "Keep USB audio inputs without connector detection available"
+  },
+  "source": {
+    "repository": "microsoft/low-latency-audio",
+    "commit": "7af4ddaec3e930a029a3e27750fe181b03a7ea2a"
+  },
+  "bcl": {
+    "revision": "1228d56bf3135b61e909c002f7257366fff0bce9"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 1,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "6f1b6b17700d96d09eb3b3e0920af97601c0f9a42688582db677bc8bd7313253",
+    "tree": "328691d01e06f28d0b91b147777371f67d66f04f"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL verifies the pinned production source is red before the change and green after it, and that connector-controlled jacks retain detection. The Windows kernel driver has not been built or installed by BCL; the final UI and meter behavior require the reporter's Sound Blaster G3."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/microsoft/low-latency-audio/issues/36",
+    "pr": "https://github.com/microsoft/low-latency-audio/pull/37"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
