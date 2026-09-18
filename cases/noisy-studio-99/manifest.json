@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "noisy-studio-99",
+    "title": "Keep browser-tab audio out of the native desktop app"
+  },
+  "source": {
+    "repository": "noisy/noisy-studio",
+    "commit": "55024b577cbcb015b2979785160b3f74e047ee65"
+  },
+  "bcl": {
+    "revision": "4e58c839ed60ceace7063dbbb4b14448137b3f55"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 350,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "e4810686b12c707710d8c7ce597e0c79618e01d532c4b87f85aaae5a842439b3",
+    "tree": "e2e6e2b90453d34e1184330a378d836cca0bc901"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL proves native/web policy at startup helpers, HTTP settings, hardware-failure fallback and Vue rendering, then runs both complete automated suites. A packaged Electron build on the owner's microphone remains the final application check."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/noisy/noisy-studio/issues/99",
+    "pr": "https://github.com/noisy/noisy-studio/pull/103"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
