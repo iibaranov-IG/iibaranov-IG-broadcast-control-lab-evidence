@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "logic-pro-mcp-38",
+    "title": "Align Logic Pro mixer parameter contracts"
+  },
+  "source": {
+    "repository": "koltyj/logic-pro-mcp",
+    "commit": "bdc105e7defd3622b1869e2dcd0dfd5159e1409c"
+  },
+  "bcl": {
+    "revision": "ae3e4647fe4f9dbd97c10bd22bb17ac935d1021a"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 11,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "1fb0e2ad4823cb7e561d25becd08ff6a83995e5ca494c6330a5763eae1ececec",
+    "tree": "711a66fef0974ca8716711ea72dd4381293080b6"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL proves an exact baseline-red/candidate-green contract and the candidate builds in Swift release mode. The upstream macOS CI awaits maintainer approval for a first-time fork, and changing a live Logic Pro mixer remains the owner check."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/koltyj/logic-pro-mcp/issues/38",
+    "pr": "https://github.com/koltyj/logic-pro-mcp/pull/42"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
