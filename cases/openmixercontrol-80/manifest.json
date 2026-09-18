@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "openmixercontrol-80",
+    "title": "Make the raw fader value type consistent"
+  },
+  "source": {
+    "repository": "OpenMixerProject/OpenMixerControl",
+    "commit": "6838286c6fb2eefc16a71aaacf091f4dda40a629"
+  },
+  "bcl": {
+    "revision": "a8ccbf77c45ca7de27e3508f1a179d10f0d9840f"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 4,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "75f181943f0f0d26517d1c408e684757c2a3a0987f84e0102a3a60ded1b440e5",
+    "tree": "05655d1fab0acff458b6bb75c92121f1a2d069e3"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL proves the API mismatch on the pinned baseline and the consistent raw fader type after the repair. The repository's full build requires external libraries and Linux headers; GitHub's target builds remain authoritative."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/OpenMixerProject/OpenMixerControl/issues/80",
+    "pr": "https://github.com/OpenMixerProject/OpenMixerControl/pull/93"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
