@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "esp-osc-2",
+    "title": "Build tinyosc cleanly with strict aliasing enabled"
+  },
+  "source": {
+    "repository": "256dpi/esp-osc",
+    "commit": "e8aa93aa1b27d06d8b1e6a7c20c7e3bec9291c2c"
+  },
+  "bcl": {
+    "revision": "5c94e6888d0d983abdadff69300e38f592f57078"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 1,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "4bcfea946751b4b5c895236a22a16294e17cb1863e06a6fa1ee941b30769ec7c",
+    "tree": "1622baf8235fc4676acba9caeda9848efa41c3da"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": true,
+    "limitations": [
+      "BCL reproduces the reported GCC diagnostic and verifies exact OSC float/double serialization on Linux. It does not run the complete ESP-IDF 6.1 firmware build or flash an ESP device."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/256dpi/esp-osc/issues/2",
+    "pr": "https://github.com/256dpi/esp-osc/pull/3"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
