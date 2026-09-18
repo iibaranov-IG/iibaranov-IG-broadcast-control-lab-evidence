@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "amical-165",
+    "title": "Capture the active microphone channel on multichannel interfaces"
+  },
+  "source": {
+    "repository": "amicalhq/amical",
+    "commit": "0d82ae797c4562ed0c7f10d2fb06fa7724c541c0"
+  },
+  "bcl": {
+    "revision": "6802a73896621b82ceb900ced463761c7dce2f8f"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 5,
+      "skipped": 0
+    }
+  },
+  "candidate": {
+    "sha256": "aeb21e9db255ab39e576c9cc5a4fc7fe6e920eedc7a030531ab36370882ca464",
+    "tree": "6a4d912a827249ad344ef1a7927367302bb29c4b"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": true,
+    "limitations": [
+      "BCL executes the real AudioWorklet with deterministic multichannel buffers and verifies its capture policy. The complete upstream desktop suite passed locally. A physical Apollo Twin or BlackHole system test remains owner-operated."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/amicalhq/amical/issues/165",
+    "pr": "https://github.com/amicalhq/amical/pull/184"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
