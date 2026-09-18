@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "id": "tonepush-9",
+    "title": "Use four-slot bank labels for HX Effects presets"
+  },
+  "source": {
+    "repository": "crmne/tonepush",
+    "commit": "9c5fe357c563da8d3ac971ea1e9231c665884cdd"
+  },
+  "bcl": {
+    "revision": "3598b098684d8932c381376f6610e2c28943e71e"
+  },
+  "qualification": {
+    "kind": "RED_GREEN",
+    "baseline": {
+      "status": "EXPECTED_FAILURE"
+    },
+    "candidate": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "suite": {
+      "status": "PASS",
+      "total": 179,
+      "skipped": 1
+    }
+  },
+  "candidate": {
+    "sha256": "71ee0cbe4f6696dd2d4a45b41e7ca7589475bcc3e11df5b5b9c02f5bb1077383",
+    "tree": "989acf534f335c8a95db8aadb8a74f6dc1e99b6f"
+  },
+  "verification": {
+    "hardwareVerified": false,
+    "applicationVerified": false,
+    "limitations": [
+      "BCL proves the reported index/label mapping against production Rust code, preserves HX Stomp behavior and the old public struct-literal shapes, rejects unknown backup geometry, compiles the CLI and GUI, and runs the pure protocol and backup suites. It cannot operate the reporter’s physical HX Effects; the final front-panel selection check remains with its owner."
+    ]
+  },
+  "upstream": {
+    "issue": "https://github.com/crmne/tonepush/issues/9",
+    "pr": "https://github.com/crmne/tonepush/pull/12"
+  },
+  "publishedAt": "2026-09-18T14:10:26Z"
+}
